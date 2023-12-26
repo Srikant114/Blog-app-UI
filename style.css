@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 95vw;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+.headerContainer{
+    margin-bottom: 2.8rem;
+}
+.headerTitle{
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.headerDescription{
+    max-width: 568px;
+    text-align: center;
+    color: rgb(105, 99, 99);
+    margin: 0 auto;
+}
+.mainContainer{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+}
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(111,109,109);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.cardImageContainer{
+    position: relative;
+    overflow: hidden;
+    height: 11rem;
+}
+.cardImage{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.cardTitleContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.cardContainer:hover .cardImage{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+.cardTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+    color: rgb(25, 23, 23);
+}
+.cardTitle:hover {
+    color: rgb(67, 67, 191);
+}
+.cardDescription{
+    color: rgb(113, 107, 107);
+    font-size: 1rem;
+}
+.cardFooterContainer{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 1.5rem ; */
+    padding: 1.5rem 0;
+    align-items: flex-end;
+}
+.authorContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.authorAvatarContainer{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(150, 147, 147);
+    border-radius: 50%;
+    background-color: rgb(243, 239, 239);
+}
+.authorInfoContainer{
+    display: flex;
+    flex-direction: column;
+}
+.authorTitle{
+    color: rgb(38, 38, 149);
+}
+.authorDate{
+    color: rgb(136, 126, 126);
+}
+.cardtagContainer{
+    color: grey;
+    font-size: 0.9rem;
+    border: 1px solid rgb(76, 71, 71);
+    border-radius: 2px;
+    line-height: 1.3rem;
+    padding: 0.25rem 0.5rem;
+}
+
+@media screen and (max-width:1200px) {
+    .mainContainer{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width:860px) {
+    .mainContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:426px) {
+    .mainContainer{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
